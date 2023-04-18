@@ -13,8 +13,8 @@ namespace Supermarker_mvp.Views
         string PayModeName { get; set; }
         string PayModeObservation { get; set; }
         string SearchValue { get; set; }
-        string IsEdit { get; set; }
-        string IsSuccessful { get; set; }
+        bool IsEdit { get; set; }
+        bool IsSuccessful { get; set; }
         string Message { get; set; }
 
         event EventHandler SearchEvent;

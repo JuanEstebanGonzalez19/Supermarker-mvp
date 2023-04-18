@@ -8,6 +8,10 @@ namespace Supermarker_mvp.Models
 {
     internal interface IPayModeRepository
     {
-
+        void Add(PayModeModel PayModeModel);
+        void Edit(PayModeModel PayModeModel);
+        void Delete(int id);
+        IEnumerable<PayModeModel> GetAll();
+        IEnumerable<PayModeModel> GetByValue(string value);
     }
 }
