@@ -88,6 +88,24 @@ namespace Supermarker_mvp.Views
             DgPayMode.DataSource = payModeList;
 
         }
+        //a continuacion esta el modo sigleton, con esto evitamos que un boton abra el mismo formulario varias veces
+        private static PayModeView instance;
+        public static PayModeView GetInstance() 
+        {
+            if (instance == null || instance.IsDisposed) 
+            { 
+                instance = new PayModeView();
+            }
+            else
+            {
+                if (instance.WindowState == FormWindowState.Minimized) 
+                {
+                    instance.WindowState = FormWindowState.Normal;
+                }
+                instance.BringToFront();
+            }
+            return instance;
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 

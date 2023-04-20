@@ -40,3 +40,5 @@ C:\Users\estudiantes\source\repos\Supermarker-mvp\bin\Debug\net7.0-windows\runti
 C:\Users\estudiantes\source\repos\Supermarker-mvp\bin\Debug\net7.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\estudiantes\source\repos\Supermarker-mvp\bin\Debug\net7.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\estudiantes\source\repos\Supermarker-mvp\obj\Debug\net7.0-windows\Supermarker-mvp.csproj.CopyComplete
+C:\Users\estudiantes\source\repos\Supermarker-mvp\bin\Debug\net7.0-windows\Supermarker-mvp.dll.config
+C:\Users\estudiantes\source\repos\Supermarker-mvp\obj\Debug\net7.0-windows\Supermarker_mvp.Views.MainView.resources
