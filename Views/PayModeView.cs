@@ -22,6 +22,7 @@ namespace Supermarker_mvp.Views
 
             tabControl1.TabPages.Remove(tabPagePayModeDetail);//esto para que cuando el formulario se muestre,
                                                               //no aparezca la pestaña PayModeDetails
+            BtnClose.Click += delegate { this.Close(); };
         }
 
         private void AssociateAndRaiseViewEvents()
@@ -90,11 +91,15 @@ namespace Supermarker_mvp.Views
         }
         //a continuacion esta el modo sigleton, con esto evitamos que un boton abra el mismo formulario varias veces
         private static PayModeView instance;
-        public static PayModeView GetInstance() 
+        public static PayModeView GetInstance(Form parentContainer) 
         {
             if (instance == null || instance.IsDisposed) 
             { 
                 instance = new PayModeView();
+                instance.MdiParent = parentContainer;
+
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
             }
             else
             {
