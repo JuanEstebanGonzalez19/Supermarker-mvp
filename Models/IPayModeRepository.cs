@@ -8,9 +8,9 @@ namespace Supermarker_mvp.Models
 {
     internal interface IPayModeRepository
     {
-        void Add(PayModeModel PayModeModel);
-        void Edit(PayModeModel PayModeModel);
-        void Delete(int id);
+        void Add(PayModeModel payModeModel);
+        void Edit(PayModeModel payModeModel);
+        void Delete(int Id);
         IEnumerable<PayModeModel> GetAll();
         IEnumerable<PayModeModel> GetByValue(string value);
     }
