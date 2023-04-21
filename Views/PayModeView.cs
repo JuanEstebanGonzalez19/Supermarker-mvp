@@ -13,7 +13,7 @@ namespace Supermarker_mvp.Views
     public partial class PayModeView : Form, IPayModeView//esto es para implementar la interfaz del pay mode view 
     {
         private bool isEdit;
-        private bool isIsSuccessful;
+        private bool isSuccessful;
         private string message;
         public PayModeView()
         {
@@ -36,6 +36,49 @@ namespace Supermarker_mvp.Views
                 {
                     SearchEvent?.Invoke(this, EventArgs.Empty);
                 }
+            };
+            //aqui agremagos los demas botones con respecto a los eventos
+            BtnNew.Click += delegate 
+            { 
+                AddNewEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tabPagePayModeList);
+                tabControl1.TabPages.Add(tabPagePayModeDetail);
+                tabPagePayModeDetail.Text= "Add New Pay Mode";//cambia el titulo de la pestaña
+            };
+            BtnEdit.Click += delegate 
+            { 
+                EditEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tabPagePayModeList);
+                tabControl1.TabPages.Add(tabPagePayModeDetail);
+                tabPagePayModeDetail.Text = "Edit Pay Mode";//cambia el titulo de la pestaña
+            };
+            BtnDelete.Click += delegate 
+            {
+                var result = MessageBox.Show(
+                    "Are you sure you want to delete the select Pay Mode",
+                    "WARNING",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes) 
+                { 
+                    DeleteEvent?.Invoke(this, EventArgs.Empty);
+                    MessageBox.Show(Message);
+                }
+            };
+            BtnSave.Click += delegate 
+            { 
+                SaveEvent?.Invoke(this,EventArgs.Empty);
+                if (IsSuccessful) //si grabar fue exitoso
+                {
+                    tabControl1.TabPages.Remove(tabPagePayModeList);
+                    tabControl1.TabPages.Add(tabPagePayModeDetail);
+                }
+                MessageBox.Show(Message);
+            };
+            BtnCancel.Click += delegate 
+            { 
+                CancelEvent?.Invoke(this,EventArgs.Empty);
+                tabControl1.TabPages.Remove(tabPagePayModeList);
+                tabControl1.TabPages.Add(tabPagePayModeDetail);
             };
         }
 
@@ -64,8 +107,8 @@ namespace Supermarker_mvp.Views
         }
         public bool IsEdit 
         { 
-            get { return IsEdit; } 
-            set { IsEdit = value; } 
+            get { return isEdit; }
+            set { isEdit = value; }
         }
         public bool IsSuccessful 
         {
@@ -111,6 +154,11 @@ namespace Supermarker_mvp.Views
             }
             return instance;
         }
+        /// <summary>
+        /// ////////////////////////////////////////////////////////////////////////
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 

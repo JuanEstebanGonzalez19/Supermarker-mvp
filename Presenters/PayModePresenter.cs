@@ -55,12 +55,47 @@ namespace Supermarker_mvp.Presenters
 
         private void CancelAction(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            CleanViewFields();
         }
 
         private void SavePayMode(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //Se crea  un objeto de la clase PayModeModel y se asignan los datos de
+            //las cajas de texto de la vista
+            var payMode = new PayModeModel();
+            payMode.Id = Convert.ToInt32(view.PayModeId);
+            payMode.Name = view.PayModeName;
+            payMode.Observation = view.PayModeObservation;
+
+            try 
+            {
+                new Common.ModelDataValidation().Validate(payMode);
+                if (view.IsEdit) 
+                {
+                    repository.Edit(payMode);
+                    view.Message = "PayMode Edited is Successfuly";
+                }
+                else 
+                {
+                    repository.Add(payMode);
+                    view.Message = "PayMode Add is Successfuly";
+                }
+            }catch(Exception ex) 
+            { 
+                //Si ocurre una excepcion se configura IsSuccessfull en false
+                //y la propiedad Message de la vista se asigna el menssage de la excepcion
+                view.IsSuccessful = false;
+                view.Message = ex.Message;
+            }
+            view.IsSuccessful = true;
+            loadAllPayModeList();
+            CleanViewFields();
+        }
+        private void CleanViewFields() 
+        {
+            view.PayModeId = "0";
+            view.PayModeName = "";
+            view.PayModeObservation = "";
         }
 
         private void DeleteSelectPayMode(object? sender, EventArgs e)
@@ -70,12 +105,22 @@ namespace Supermarker_mvp.Presenters
 
         private void LoadSelectPayModeToEdit(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //se obtiene el objeto del datagriedview que se ecuentra seleccionado
+            var payMode = (PayModeModel)payModeBindingSource.Current;
+
+            //se cambia el contenido de las cajas de texto por el objeto recuperado
+            //del datagriedview
+            view.PayModeId = payMode.Id.ToString();
+            view.PayModeName = payMode.Name;
+            view.PayModeObservation = payMode.Observation;
+
+            //se establece el modo con edicion
+            view.IsEdit = true;
         }
 
         private void AddNewPayMode(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            view.IsEdit = false;
         }
     }
 }
