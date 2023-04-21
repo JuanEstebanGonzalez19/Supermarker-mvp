@@ -100,7 +100,21 @@ namespace Supermarker_mvp.Presenters
 
         private void DeleteSelectPayMode(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            try 
+            {
+                //se recupera el objeto de la fila seleccionada del datagriedview
+                var payMode = (PayModeModel) payModeBindingSource.Current;
+
+                //se invoca el metodo Delete del repositoria pasandode el ID del Pay Mode
+                repository.Delete(payMode.Id);
+                view.IsSuccessful = true;
+                view.Message = "Pay Mode Deleted is Successfully";
+                loadAllPayModeList();
+            }catch(Exception ex) 
+            {
+                view.IsSuccessful = false;
+                view.Message = "An Error ocurred, could not delete pay mode";
+            }
         }
 
         private void LoadSelectPayModeToEdit(object? sender, EventArgs e)
