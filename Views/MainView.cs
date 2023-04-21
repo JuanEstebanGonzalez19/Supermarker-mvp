@@ -22,5 +22,10 @@ namespace Supermarker_mvp.Views
         public event EventHandler ShowPayModeView;
         public event EventHandler ShowProductView;
         public event EventHandler ShowCustomersView;
+
+        private void BtnProducts_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -60,6 +60,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -82,10 +83,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bauhaus 93", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Matura MT Script Capitals", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(159, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 54);
+            this.label1.Size = new System.Drawing.Size(274, 64);
             this.label1.TabIndex = 0;
             this.label1.Text = "Pay Mode";
             // 
@@ -102,6 +103,7 @@
             // 
             // tabPagePayModeList
             // 
+            this.tabPagePayModeList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tabPagePayModeList.Controls.Add(this.BtnClose);
             this.tabPagePayModeList.Controls.Add(this.BtnDelete);
             this.tabPagePayModeList.Controls.Add(this.BtnEdit);
@@ -110,13 +112,13 @@
             this.tabPagePayModeList.Controls.Add(this.BtnSearch);
             this.tabPagePayModeList.Controls.Add(this.TxtSearch);
             this.tabPagePayModeList.Controls.Add(this.label2);
+            this.tabPagePayModeList.ForeColor = System.Drawing.Color.Crimson;
             this.tabPagePayModeList.Location = new System.Drawing.Point(4, 24);
             this.tabPagePayModeList.Name = "tabPagePayModeList";
             this.tabPagePayModeList.Padding = new System.Windows.Forms.Padding(3);
             this.tabPagePayModeList.Size = new System.Drawing.Size(792, 314);
             this.tabPagePayModeList.TabIndex = 0;
             this.tabPagePayModeList.Text = "Pay Mode List";
-            this.tabPagePayModeList.UseVisualStyleBackColor = true;
             // 
             // BtnClose
             // 
@@ -199,10 +201,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(155, 14);
+            this.label2.Font = new System.Drawing.Font("Matura MT Script Capitals", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(155, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 17);
+            this.label2.Size = new System.Drawing.Size(148, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Search Pay Mode";
             // 
@@ -310,7 +312,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Name = "PayModeView";
-            this.Text = "PayModeView";
+            this.Text = "Pay Mode Management";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
