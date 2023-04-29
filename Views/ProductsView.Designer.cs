@@ -33,7 +33,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPageProductsDetail = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtSearch = new System.Windows.Forms.TextBox();
             this.BtnSearch = new System.Windows.Forms.Button();
@@ -54,7 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabPageProductsDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +91,7 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPageProductsDetail);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 100);
             this.tabControl1.Name = "tabControl1";
@@ -117,23 +117,23 @@
             this.tabPage1.Text = "Products List";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tabPageProductsDetail
             // 
-            this.tabPage2.Controls.Add(this.BtnCancel);
-            this.tabPage2.Controls.Add(this.BtnSave);
-            this.tabPage2.Controls.Add(this.TxtProductsObservation);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.TxtProductsName);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.TxtProductsId);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(792, 322);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Products Detail";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPageProductsDetail.Controls.Add(this.BtnCancel);
+            this.tabPageProductsDetail.Controls.Add(this.BtnSave);
+            this.tabPageProductsDetail.Controls.Add(this.TxtProductsObservation);
+            this.tabPageProductsDetail.Controls.Add(this.label5);
+            this.tabPageProductsDetail.Controls.Add(this.TxtProductsName);
+            this.tabPageProductsDetail.Controls.Add(this.label4);
+            this.tabPageProductsDetail.Controls.Add(this.TxtProductsId);
+            this.tabPageProductsDetail.Controls.Add(this.label3);
+            this.tabPageProductsDetail.Location = new System.Drawing.Point(4, 24);
+            this.tabPageProductsDetail.Name = "tabPageProductsDetail";
+            this.tabPageProductsDetail.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageProductsDetail.Size = new System.Drawing.Size(792, 322);
+            this.tabPageProductsDetail.TabIndex = 1;
+            this.tabPageProductsDetail.Text = "Products Detail";
+            this.tabPageProductsDetail.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -302,8 +302,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tabPageProductsDetail.ResumeLayout(false);
+            this.tabPageProductsDetail.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgProducts)).EndInit();
             this.ResumeLayout(false);
 
@@ -324,7 +324,7 @@
         private Button BtnSearch;
         private TextBox TxtSearch;
         private Label label2;
-        private TabPage tabPage2;
+        private TabPage tabPageProductsDetail;
         private Label label3;
         private TextBox TxtProductsName;
         private Label label4;
