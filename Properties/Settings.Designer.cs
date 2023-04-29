@@ -33,5 +33,14 @@ namespace Supermarker_mvp.Properties {
                 return ((string)(this["Valor"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        public string Valor2 {
+            get {
+                return ((string)(this["Valor2"]));
+            }
+        }
     }
 }
