@@ -8,5 +8,10 @@ namespace Supermarker_mvp.Models
 {
     internal interface IProvidersRepository
     {
+        void Add(ProvidersModel providersModel);
+        void Edit(ProvidersModel providersModel);
+        void Delete(int id);
+        IEnumerable<ProvidersModel> GetAll();
+        IEnumerable<ProvidersModel> GetByValue(string value);
     }
 }
