@@ -59,10 +59,6 @@ namespace Supermarker_mvp.Views
         public event EventHandler SaveEvent;
         public event EventHandler CancelEvent;
 
-        public void SetProvidersListBildingSource(BindingSource providersList)
-        {
-            DgProviders.DataSource = providersList;
-        }
         public ProvidersView()
         {
             InitializeComponent();
@@ -72,8 +68,12 @@ namespace Supermarker_mvp.Views
 
             BtnClose.Click += delegate { this.Close(); };
         }
+        public void SetProvidersListBildingSource(BindingSource providersList)
+        {
+            DgProviders.DataSource = providersList;
+        }
         private static ProvidersView instance;
-        public static ProductsView GetInstance(Form parentContainer)
+        public static ProvidersView GetInstance(Form parentContainer)
         {
             if (instance == null || instance.IsDisposed)
             {

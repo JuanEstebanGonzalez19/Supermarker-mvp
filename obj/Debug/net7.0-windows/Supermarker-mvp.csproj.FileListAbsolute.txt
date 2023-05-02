@@ -43,3 +43,4 @@ C:\Users\estudiantes\source\repos\Supermarker-mvp\obj\Debug\net7.0-windows\Super
 C:\Users\estudiantes\source\repos\Supermarker-mvp\bin\Debug\net7.0-windows\Supermarker-mvp.dll.config
 C:\Users\estudiantes\source\repos\Supermarker-mvp\obj\Debug\net7.0-windows\Supermarker_mvp.Views.MainView.resources
 C:\Users\estudiantes\source\repos\Supermarker-mvp\obj\Debug\net7.0-windows\Supermarker_mvp.Views.ProductsView.resources
+C:\Users\estudiantes\source\repos\Supermarker-mvp\obj\Debug\net7.0-windows\Supermarker_mvp.Views.ProvidersView.resources

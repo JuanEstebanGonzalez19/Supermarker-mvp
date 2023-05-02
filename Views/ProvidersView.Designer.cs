@@ -165,6 +165,7 @@
             // 
             // DgProviders
             // 
+            this.DgProviders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgProviders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgProviders.Location = new System.Drawing.Point(35, 75);
             this.DgProviders.Name = "DgProviders";
