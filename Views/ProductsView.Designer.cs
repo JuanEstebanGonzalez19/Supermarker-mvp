@@ -284,8 +284,11 @@
             // 
             this.TxtProductsId.Location = new System.Drawing.Point(46, 36);
             this.TxtProductsId.Name = "TxtProductsId";
+            this.TxtProductsId.ReadOnly = true;
             this.TxtProductsId.Size = new System.Drawing.Size(172, 23);
             this.TxtProductsId.TabIndex = 1;
+            this.TxtProductsId.Text = "0";
+            this.TxtProductsId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
             // 

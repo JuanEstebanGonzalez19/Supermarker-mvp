@@ -50,10 +50,10 @@ namespace Supermarker_mvp._Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = @"UPDATE PayMode
-                                        SET Pay_Mode_Name = @name,
-                                        Pay_Mode_Observation = @observation
-                                        WHERE Pay_Mode_Id = @id";
+                command.CommandText = @"UPDATE Products
+                                        SET Products_Name = @name,
+                                        Products_Observation = @observation
+                                        WHERE Products_Id = @id";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = productsModel.Name;
                 command.Parameters.Add("@observation", SqlDbType.NVarChar).Value = productsModel.Observation;
                 command.Parameters.Add("@id", SqlDbType.NVarChar).Value = productsModel.Id;
