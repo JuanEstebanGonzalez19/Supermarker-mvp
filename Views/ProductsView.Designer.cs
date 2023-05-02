@@ -32,7 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPageProductsList = new System.Windows.Forms.TabPage();
             this.BtnClose = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.BtnEdit = new System.Windows.Forms.Button();
@@ -53,7 +53,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPageProductsList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgProducts)).BeginInit();
             this.tabPageProductsDetail.SuspendLayout();
             this.SuspendLayout();
@@ -90,7 +90,7 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPageProductsList);
             this.tabControl1.Controls.Add(this.tabPageProductsDetail);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 100);
@@ -99,26 +99,27 @@
             this.tabControl1.Size = new System.Drawing.Size(800, 350);
             this.tabControl1.TabIndex = 1;
             // 
-            // tabPage1
+            // tabPageProductsList
             // 
-            this.tabPage1.Controls.Add(this.BtnClose);
-            this.tabPage1.Controls.Add(this.BtnDelete);
-            this.tabPage1.Controls.Add(this.BtnEdit);
-            this.tabPage1.Controls.Add(this.BtnNew);
-            this.tabPage1.Controls.Add(this.DgProducts);
-            this.tabPage1.Controls.Add(this.BtnSearch);
-            this.tabPage1.Controls.Add(this.TxtSearch);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 322);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Products List";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPageProductsList.Controls.Add(this.BtnClose);
+            this.tabPageProductsList.Controls.Add(this.BtnDelete);
+            this.tabPageProductsList.Controls.Add(this.BtnEdit);
+            this.tabPageProductsList.Controls.Add(this.BtnNew);
+            this.tabPageProductsList.Controls.Add(this.DgProducts);
+            this.tabPageProductsList.Controls.Add(this.BtnSearch);
+            this.tabPageProductsList.Controls.Add(this.TxtSearch);
+            this.tabPageProductsList.Controls.Add(this.label2);
+            this.tabPageProductsList.Location = new System.Drawing.Point(4, 24);
+            this.tabPageProductsList.Name = "tabPageProductsList";
+            this.tabPageProductsList.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageProductsList.Size = new System.Drawing.Size(792, 322);
+            this.tabPageProductsList.TabIndex = 0;
+            this.tabPageProductsList.Text = "Products List";
+            this.tabPageProductsList.UseVisualStyleBackColor = true;
             // 
             // BtnClose
             // 
+            this.BtnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnClose.BackgroundImage = global::Supermarker_mvp.Properties.Resources.cerrar;
             this.BtnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnClose.Location = new System.Drawing.Point(668, 217);
@@ -129,6 +130,7 @@
             // 
             // BtnDelete
             // 
+            this.BtnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnDelete.BackgroundImage = global::Supermarker_mvp.Properties.Resources.delete;
             this.BtnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnDelete.Location = new System.Drawing.Point(668, 158);
@@ -139,6 +141,7 @@
             // 
             // BtnEdit
             // 
+            this.BtnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnEdit.BackgroundImage = global::Supermarker_mvp.Properties.Resources.edit;
             this.BtnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnEdit.Location = new System.Drawing.Point(668, 99);
@@ -149,6 +152,7 @@
             // 
             // BtnNew
             // 
+            this.BtnNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnNew.BackgroundImage = global::Supermarker_mvp.Properties.Resources._new;
             this.BtnNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnNew.Location = new System.Drawing.Point(668, 40);
@@ -159,6 +163,9 @@
             // 
             // DgProducts
             // 
+            this.DgProducts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DgProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgProducts.Location = new System.Drawing.Point(42, 69);
@@ -179,6 +186,8 @@
             // 
             // TxtSearch
             // 
+            this.TxtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtSearch.Location = new System.Drawing.Point(42, 40);
             this.TxtSearch.Name = "TxtSearch";
             this.TxtSearch.PlaceholderText = "Data to search";
@@ -301,8 +310,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabPageProductsList.ResumeLayout(false);
+            this.tabPageProductsList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgProducts)).EndInit();
             this.tabPageProductsDetail.ResumeLayout(false);
             this.tabPageProductsDetail.PerformLayout();
@@ -316,7 +325,7 @@
         private Label label1;
         private PictureBox pictureBox1;
         private TabControl tabControl1;
-        private TabPage tabPage1;
+        private TabPage tabPageProductsList;
         private Button BtnClose;
         private Button BtnDelete;
         private Button BtnEdit;

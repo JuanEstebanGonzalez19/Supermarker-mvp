@@ -32,12 +32,9 @@ namespace Supermarker_mvp.Presenters
         }
         private void ShowProductsView(object? sender, EventArgs e)
         {
-            IProductsView view = new ProductsView();
+            IProductsView view = ProductsView.GetInstance((MainView)mainView);//esto completa el sigleton
             IProductsRepository repository = new ProductsRepository(sqlConnectionString);
             new ProductsPresenter(view, repository);
-            /*IProductsView view = ProductsView.GetInstance((MainView)mainView);//esto completa el sigleton
-            IProductsRepository repository = new ProductsRepository(sqlConnectionString);
-            new PayModePresenter(view, repository);*/
         }
     }
 }

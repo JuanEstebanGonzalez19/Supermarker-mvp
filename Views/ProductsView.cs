@@ -70,6 +70,8 @@ namespace Supermarker_mvp.Views
 
             tabControl1.TabPages.Remove(tabPageProductsDetail);
 
+            BtnClose.Click += delegate { this.Close(); };
+
         }
         private static ProductsView instance;
         public static ProductsView GetInstance(Form parentContainer)
@@ -102,7 +104,50 @@ namespace Supermarker_mvp.Views
                     SearchEvent?.Invoke(this, EventArgs.Empty);
                 }
             };
+            BtnNew.Click += delegate
+            {
+                AddNewEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tabPageProductsList);
+                tabControl1.TabPages.Add(tabPageProductsDetail);
+                tabPageProductsDetail.Text = "Add New Product";//cambia el titulo de la pestaña
+            };
+            BtnEdit.Click += delegate
+            {
+                EditEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tabPageProductsList);
+                tabControl1.TabPages.Add(tabPageProductsDetail);
+                tabPageProductsDetail.Text = "Edit Products";//cambia el titulo de la pestaña
+            };
+            BtnDelete.Click += delegate
+            {
+                var result = MessageBox.Show(
+                    "Are you sure you want to delete the select Product",
+                    "WARNING",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    DeleteEvent?.Invoke(this, EventArgs.Empty);
+                    MessageBox.Show(Message);
+                }
+            };
+            BtnSave.Click += delegate
+            {
+                SaveEvent?.Invoke(this, EventArgs.Empty);
+                if (IsSuccessful) //si grabar fue exitoso
+                {
+                    tabControl1.TabPages.Remove(tabPageProductsList);
+                    tabControl1.TabPages.Add(tabPageProductsDetail);
+                }
+                MessageBox.Show(Message);
+            };
+            BtnCancel.Click += delegate
+            {
+                CancelEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tabPageProductsList);
+                tabControl1.TabPages.Add(tabPageProductsDetail);
+            };
         }
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
