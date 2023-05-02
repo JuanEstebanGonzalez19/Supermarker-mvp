@@ -134,7 +134,7 @@ namespace Supermarker_mvp.Views
                 SaveEvent?.Invoke(this, EventArgs.Empty);
                 if (IsSuccessful) //si grabar fue exitoso
                 {
-                    tabControl1.TabPages.Remove(tabPageProviderssList);
+                    tabControl1.TabPages.Remove(tabPageProvidersList);
                     tabControl1.TabPages.Add(tabPageProvidersDetail);
                 }
                 MessageBox.Show(Message);
