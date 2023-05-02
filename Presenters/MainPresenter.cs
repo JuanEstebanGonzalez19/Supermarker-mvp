@@ -21,12 +21,23 @@ namespace Supermarker_mvp.Presenters
             this.sqlConnectionString = sqlConnectionString;
 
             this.mainView.ShowPayModeView += ShowPayModeView;
+            this.mainView.ShowProductsView += ShowProductsView;
+
         }
         private void ShowPayModeView(object? sender, EventArgs e)
         {
             IPayModeView view = PayModeView.GetInstance((MainView)mainView);//esto completa el sigleton
             IPayModeRepository repository = new PayModeRepository(sqlConnectionString);
             new PayModePresenter(view, repository);
+        }
+        private void ShowProductsView(object? sender, EventArgs e)
+        {
+            IProductsView view = new ProductsView();
+            IProductsRepository repository = new ProductsRepository(sqlConnectionString);
+            new ProductsPresenter(view, repository);
+            /*IProductsView view = ProductsView.GetInstance((MainView)mainView);//esto completa el sigleton
+            IProductsRepository repository = new ProductsRepository(sqlConnectionString);
+            new PayModePresenter(view, repository);*/
         }
     }
 }
